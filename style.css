@@ -6,38 +6,58 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #f3f1ff;
 }
 
-/* header styel */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-.header {
+/* header style */
+main {
   display: flex;
-  width: 100%;
-  height: 94px;
-  background-color: #562eff;
   justify-content: center;
   align-items: center;
 }
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  width: 870px;
+.container {
+  background-color: #ffffff;
+  max-width: 1110px;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 5px;
 }
-.header-left {
+
+.header {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-align: center;
+}
+.main-header {
+  /* display: flex;
+  justify-content: space-between;
+
+  width: 100%; */
+}
+/* .header-left {
   display: flex;
   align-items: center;
-}
-.idea {
+} */
+.header-left h5 {
   font-size: 24px;
-  color: #fff;
+  color: #3a3a3a;
 }
 
 .header-right a {
   text-decoration: none;
   font-size: 16px;
   padding: 26px;
-  color: #ffffff;
+  color: black;
   margin-top: 20px;
   display: inline-block;
 }
@@ -60,19 +80,7 @@ body {
 /*-----
  start journey
 ---------  */
-main {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-.container {
-  background-color: #ffffff;
-  width: 1110px;
-  padding: 30px;
-  margin-top: 30px;
-  border-radius: 5px;
-}
+
 .start {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -83,9 +91,11 @@ main {
 .journey h1 {
   font-size: 52px;
   font-weight: 600;
+  color: #3a3a3a;
 }
 .journey p {
   font-size: 16px;
+  color: #3a3a3a;
 }
 .prebook {
   background: #e02c6d;
@@ -98,10 +108,13 @@ main {
   cursor: pointer;
 }
 .camera img {
-  width: 440px;
-  background-image: url(images/Circle\ design.svg);
-}
+  width: 100%;
 
+  transition: 5s;
+}
+.camera img:hover {
+  transform: scale(-1);
+}
 .brand img {
   padding: 0 42px;
   /* padding: 47px; */
@@ -115,17 +128,18 @@ hr {
  popular-collection
  ------ */
 
-.popular-heading {
-  color: #3a3a3a;
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 30px;
-}
 .popular {
-  gap: 30px;
+  grid-row-gap: 30px;
+
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+}
+.popular-heading h2 {
+  color: #3a3a3a;
+  font-size: 28px;
+  text-align: center;
+  margin: 49px;
 }
 .popular-info {
   background: #ffffff;
@@ -172,9 +186,15 @@ hr {
  featured-area 
  -----------------------*/
 .featured-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feature {
   background-color: #074c60;
   padding-bottom: 62px;
   margin-top: 40px;
+  width: 100%;
 }
 .business {
   text-align: center;
@@ -224,14 +244,17 @@ hr {
   border: none;
   font-size: 15px;
   font-weight: 600;
+  cursor: pointer;
 }
 /*-------------------
  footer start
 ------------- */
 
 footer {
+  width: 100%;
   text-align: center;
   background-color: #0a0826;
+  padding: 50px 0;
 }
 footer h2 {
   font: size 24px;
@@ -242,19 +265,65 @@ footer p {
   font-size: 14px;
   color: #d9dbe1;
 }
-footer {
-  padding: 50px 0;
+footer h3 {
   font-size: 14px;
   color: #d9dbe1;
 }
-.social-icon {
-}
+
 .social-icon a {
   height: 32px;
-  width: 32px;
   color: white;
-  border-radius: 13;
   padding: 7px;
-  /* background: gray; */
-  border-radius: 13;
+  background-color: #8080803b;
+  border-radius: 50%;
+}
+
+/* responsive style */
+
+@media only screen and (max-width: 687px) {
+  .main,
+  .container,
+  .header,
+  .start,
+  .brand,
+  .collection,
+  .popular,
+  .feature {
+    width: 100%;
+  }
+
+  .start,
+  .popular,
+  .support-area {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .journey {
+    text-align: center;
+    padding: 10px;
+  }
+  .journey h1 {
+    font-size: 24px;
+  }
+  .popular-heading h2 {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  .container,
+  .header,
+  .start,
+  .brand,
+  .collection,
+  .popular,
+  .featured-area {
+    width: 100%;
+  }
+  .start,
+  .popular,
+  .support-area {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
