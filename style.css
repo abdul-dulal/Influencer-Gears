@@ -26,60 +26,20 @@ main {
 }
 .container {
   background-color: #ffffff;
-  max-width: 1110px;
+  width: 1110px;
   padding: 30px;
-  margin-top: 30px;
+
   border-radius: 5px;
 }
 
 .header {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   text-align: center;
 }
-.main-header {
-  /* display: flex;
-  justify-content: space-between;
 
-  width: 100%; */
-}
-/* .header-left {
-  display: flex;
-  align-items: center;
-} */
 .header-left h5 {
   font-size: 24px;
   color: #3a3a3a;
 }
-
-.header-right a {
-  text-decoration: none;
-  font-size: 16px;
-  padding: 26px;
-  color: black;
-  margin-top: 20px;
-  display: inline-block;
-}
-
-/*----------------
- brand area
----------- */
-.brand {
-  margin: 90px 0;
-  line-height: 0;
-}
-
-/* .brand::after {
-  content: " ";
-  top: 0;
-  left: 0;
-  width: 90%;
-  border: 1px solid black;
-} */
-/*-----
- start journey
----------  */
 
 .start {
   display: grid;
@@ -109,19 +69,12 @@ main {
 }
 .camera img {
   width: 100%;
+  /* background-image: url(images/Circle\ design.svg); */
 
   transition: 5s;
 }
 .camera img:hover {
   transform: scale(-1);
-}
-.brand img {
-  padding: 0 42px;
-  /* padding: 47px; */
-  /* margin-top: -3px; */
-}
-hr {
-  background-color: #aaaaaa;
 }
 
 /*--------
@@ -129,7 +82,7 @@ hr {
  ------ */
 
 .popular {
-  grid-row-gap: 30px;
+  gap: 30px;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -186,6 +139,7 @@ hr {
  featured-area 
  -----------------------*/
 .featured-area {
+  padding-left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -251,7 +205,6 @@ hr {
 ------------- */
 
 footer {
-  width: 100%;
   text-align: center;
   background-color: #0a0826;
   padding: 50px 0;
@@ -285,13 +238,17 @@ footer h3 {
   .container,
   .header,
   .start,
-  .brand,
   .collection,
   .popular,
-  .feature {
+  .feature,
+  .footer-area {
     width: 100%;
   }
-
+  .footer-area {
+    display: block !important;
+    padding: 0px !important;
+    margin: 0px !important;
+  }
   .start,
   .popular,
   .support-area {
@@ -314,10 +271,10 @@ footer h3 {
   .container,
   .header,
   .start,
-  .brand,
   .collection,
   .popular,
-  .featured-area {
+  .featured-area,
+  .footer-area {
     width: 100%;
   }
   .start,
